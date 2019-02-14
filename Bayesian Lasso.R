@@ -68,7 +68,8 @@ for(i in 2:Niter){
   Beta.out[i,] <- updateBeta(Y,X,Sig.out[i-1],Tau.out[i-1,])
   Tau.out[i,] <- updateTau(Lambda.out[i-1],Sig.out[i-1],Beta.out[i,])
   Sig.out[i] <- updateSig2(0.01,0.01,Y,X,Beta.out[i,],Tau.out[i,])
-  Lambda.out[i] <- updateLambda(length(Beta.out[1,]),1,1.78,Tau.out[i,])
+  #the values r = 1 and Delta = 1.78 are discussed in the paper
+  Lambda.out[i] <- updateLambda(length(Beta.out[1,]),1,1.78,Tau.out[i,]) 
   print(i)
 }
 
