@@ -118,7 +118,7 @@ median(Beta[,10])
 quantile(Beta.out[,10],probs=c(0.025,0.975))
 
 #################################################################################
-#Plot similar to figure 2 of the paper, showing the results were obtained
+#Plot similar to figure 2 of the paper, showing the same results were obtained
 plot(1, type="n", xlab="", ylab="", xlim=c(-1, 1), ylim=c(11, 1),
      main = "Diabetes data intervals")
 abline(v = 0, lty = 2)
